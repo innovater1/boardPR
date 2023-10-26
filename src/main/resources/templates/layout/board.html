@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!-- Bootstrap CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+
+    <title>Layout Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand  navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/static">Home</a>
+            </div>
+            <div>
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item"><a class="nav-link" href="/board/list">게시판</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- menu.jsp -->
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">게시판</h1>
+        </div>
+    </div>
+    <div class="container" layout:fragment="content">
+
+    <hr>
+    </div> <!-- board.jsp -->
+
+    <footer class="container">
+        <p>&copy; WebMarket</p>
+    </footer> <!-- footer.jsp -->
+
+    <th:block layout:fragment="script">
+
+    </th:block>
+</body>
+</html>
